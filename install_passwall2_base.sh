@@ -68,6 +68,7 @@ opkg install \
   sing-box \
   xray-core \
   hysteria \
+  iptables \
   v2ray-geoip \
   v2ray-geosite \
   v2ray-geosite-ir
@@ -104,5 +105,8 @@ uci commit dhcp
 ok "DNS rebind configured"
 
 ### ---------- Done ----------
-ok "PassWall2 base installation completed"
-echo "Reboot recommended"
+### Restart uhttpd to clear cache
+log "Reloading LuCI..."
+/etc/init.d/uhttpd restart
+
+log "PassWall2 icons replaced successfully"
