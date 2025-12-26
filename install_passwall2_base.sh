@@ -105,9 +105,9 @@ uci commit dhcp
 ok "DNS rebind configured"
 
 ### ---------- Done ----------
-### Restart uhttpd to clear cache
 ok "PassWall2 base installation completed"
 echo "Reboot recommended"
+### -- Restart uhttpd to clear cache --
 info "Rebooting system in 5 seconds..."
 sleep 5
 reboot
