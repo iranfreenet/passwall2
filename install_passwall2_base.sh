@@ -106,7 +106,8 @@ ok "DNS rebind configured"
 
 ### ---------- Done ----------
 ok "PassWall2 base installation completed"
-### -- Restart uhttpd to clear cache --
+
+### ---------- Restart  ----------
 info "Rebooting system in 5 seconds..."
 sleep 5
 reboot
