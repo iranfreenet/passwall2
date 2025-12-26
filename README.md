@@ -29,12 +29,10 @@ OpenWrt نسخه 24.10.x
 دسترسی root
 
 نصب سریع (یک‌خطی)
-sh
-Copy code
+
 sh -c "$(wget -O- https://raw.githubusercontent.com/iranfreenet/passwall2/main/install_passwall2_base.sh)"
 نصب دستی
-sh
-Copy code
+
 cd /tmp
 wget https://raw.githubusercontent.com/iranfreenet/passwall2/main/install_passwall2_base.sh
 chmod +x install_passwall2_base.sh
