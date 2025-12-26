@@ -26,13 +26,15 @@ This repository provides a reliable foundation for PassWall2, designed to be use
 ### Install (One-Line)
 ```sh
 sh -c "$(wget -O- https://raw.githubusercontent.com/iranfreenet/passwall2/main/install_passwall2_base.sh)"
-Install (Manual)
-sh
-Copy code
+
+### Install (Manual)
+```sh
 cd /tmp
 wget https://raw.githubusercontent.com/iranfreenet/passwall2/main/install_passwall2_base.sh
 chmod +x install_passwall2_base.sh
 ./install_passwall2_base.sh
+
+
 Optional Addons (Planned)
 UI customization (icons, labels, themes)
 
