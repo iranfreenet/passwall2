@@ -104,8 +104,8 @@ done
 uci commit dhcp
 ok "DNS rebind configured"
 
-### ---------- Restart  ----------
-info "Rebooting system in 5 seconds..."
+### ---------- Auto Reboot ----------
+log "Installation completed successfully"
+log "System will reboot in 5 seconds..."
 sleep 5
 reboot
-
