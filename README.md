@@ -10,6 +10,11 @@ Clean and extendable PassWall2 base installer.
 - Ready for UI / Failover extensions
 
 ## Install
-```sh
+sh -c "$(wget -O- https://raw.githubusercontent.com/iranfreenet/passwall2/main/install_passwall2_base.sh)"
+
+## Install 2
+
+cd /tmp
+wget https://raw.githubusercontent.com/iranfreenet/passwall2/main/install_passwall2_base.sh
 chmod +x install_passwall2_base.sh
 ./install_passwall2_base.sh
