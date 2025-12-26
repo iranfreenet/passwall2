@@ -106,7 +106,9 @@ ok "DNS rebind configured"
 
 ### ---------- Done ----------
 ### Restart uhttpd to clear cache
-log "Reloading LuCI..."
-/etc/init.d/uhttpd restart
+ok "PassWall2 base installation completed"
+echo "Reboot recommended"
+info "Rebooting system in 5 seconds..."
+sleep 5
+reboot
 
-log "PassWall2 icons replaced successfully"
