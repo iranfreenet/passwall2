@@ -9,7 +9,7 @@
 # - DNS rebind fix for Iranian domains
 # - Safe to extend (UI / Failover / Theme)
 #
-# Author: DARKMATTER
+# Author: DARKMATTER by @Alireza_trbi
 # License: GPLv2
 #
 
