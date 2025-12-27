@@ -68,7 +68,6 @@ opkg install \
   sing-box \
   xray-core \
   hysteria \
-  iptables \
   v2ray-geoip \
   v2ray-geosite \
   v2ray-geosite-ir
