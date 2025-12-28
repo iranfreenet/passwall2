@@ -96,8 +96,16 @@ ok "TCP redirect enabled"
 
 ### ---------- DNS rebind (IR) ----------
 log "Adding Iranian rebind domains..."
-for d in qmb.ir medu.ir tamin.ir ebanksepah.ir banksepah.ir gov.ir \
-         tm.tipax.ir my.irancell.ir sb24.ir bsi.ir; do
+for d in qmb.ir \
+medu.ir \
+tamin.ir \
+ebanksepah.ir \
+banksepah.ir \
+gov.ir \
+tm.tipax.ir \
+my.irancell.ir \
+sb24.ir \
+bsi.ir; do
     uci add_list dhcp.@dnsmasq[0].rebind_domain="$d"
 done
 uci commit dhcp
