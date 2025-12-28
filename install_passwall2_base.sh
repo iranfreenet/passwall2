@@ -66,7 +66,6 @@ opkg update
 opkg install \
   luci-app-passwall2 \
   sing-box \
-  xray-core \
   hysteria \
   v2ray-geoip \
   v2ray-geosite \
@@ -93,26 +92,6 @@ sed -i "s|option tcp_redir_ports '.*'|option tcp_redir_ports '1:65535'|" \
 sed -i "s|option tcp_redir_ports '.*'|option tcp_redir_ports '1:65535'|" \
     /etc/config/passwall2
 ok "TCP redirect enabled"
-
-### ---------- DNS rebind (IR) ----------
-if [ $rebind -eq 1 ]; then
-    info "Adding rebind domains..."
-    domains="qmb.ir medu.ir tamin.ir ebanksepah.ir banksepah.ir gov.ir"
-    for domain in $domains; do
-        # Check if domain already exists in rebind_domain list
-        if uci get dhcp.@dnsmasq[0].rebind_domain 2>/dev/null | grep -q -w "$domain"; then
-            warning "Rebind domain $domain already added. Skipping."
-        else
-            uci add_list dhcp.@dnsmasq[0].rebind_domain="$domain"
-            check_status "uci add_list for $domain"
-        fi
-    done
-    uci commit dhcp
-    check_status "uci commit dhcp"
-    success "Rebind domains added."
-else
-    success "Skipped adding Iranian website rebind list."
-fi
 
 ### ---------- Auto Reboot ----------
 log "Installation completed successfully"
